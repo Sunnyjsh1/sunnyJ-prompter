@@ -85,9 +85,64 @@
     <div class="container">
         <h2>SunnyJ의 AI 캐릭터 프롬프터</h2>
 
-        <!-- 이하 동일 -->
-        <!-- ... (기존 입력 폼 및 선택박스, 버튼) ... -->
+        <label>주제어 입력:</label>
+        <input type="text" id="userInput" placeholder="예: 6살 동양 남자아이, 갈색 짧은머리, 흰색 반팔 티셔츠, 청바지, 스니커즈 등">
 
+        <label>일관성:</label>
+        <select id="consistency">
+            <option value="">선택 없음</option>
+            <option value="Multiple perspectives">Multiple perspectives</option>
+            <option value="Character sheet for">Character sheet for</option>
+            <option value="Character illustrations sheet">Character illustrations sheet</option>
+            <option value="Different expressions">Different expressions</option>
+            <option value="Three by three grid">Three by three grid</option>
+            <option value="Completely isolated on">Completely isolated on</option>
+            <option value="Grid format">Grid format</option>
+            <option value="Full body Different Perspectives">Full body Different Perspectives</option>
+        </select>
+
+        <label>감정:</label>
+        <select id="emotion">
+            <option value="">선택 없음</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="excited">Excited</option>
+            <option value="anxious">Anxious</option>
+            <option value="dark">Dark</option>
+            <option value="scared">Scared</option>
+        </select>
+
+        <label>배경이미지:</label>
+        <select id="mood">
+            <option value="White Background">White Background</option>
+            <option value="Romantic Scenery">Romantic Scenery</option>
+            <option value="Cute and Dreamy">Cute and Dreamy</option>
+        </select>
+
+        <label>작가 예술:</label>
+        <select id="background">
+            <option value="">선택 없음</option>
+            <option value="Eric Carle">Eric Carle</option>
+            <option value="Peter Reynolds">Peter Reynolds</option>
+        </select>
+
+        <label>카메라샷:</label>
+        <select id="cameraShot">
+            <option value="">선택 없음</option>
+            <option value="Front view">Front view</option>
+            <option value="Close-up Shot">Close-up Shot</option>
+        </select>
+
+        <label>스타일:</label>
+        <select id="style">
+            <option value="">선택 없음</option>
+            <option value="Anime">Anime</option>
+            <option value="Watercolour Painting">Watercolour Painting</option>
+        </select>
+
+        <button onclick="generatePrompt()">프롬프트 생성</button>
+        <div class="output" id="promptOutput">여기에 프롬프트가 생성됩니다.</div>
+        <button onclick="copyPrompt()">프롬프트 복사</button>
     </div>
 
 </body>
